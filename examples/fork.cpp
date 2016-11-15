@@ -14,7 +14,7 @@ pid_t  pid;
 		exit(-1);
 	}
 	else if (pid == 0) { /* child process */
-		if(execlp("/bin/ls", "ls", NULL) < 0)
+		if(execlp("/bin/ls", "ls", "-la", NULL) < 0)
 		{
 			perror("execlp");
 			exit(-1);
